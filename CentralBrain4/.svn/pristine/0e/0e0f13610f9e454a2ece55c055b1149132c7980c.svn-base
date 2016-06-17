@@ -1,0 +1,66 @@
+package service;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import db.QuestionDao;
+import domain.Question;
+import service.bean.AnsweredListBean;
+import service.bean.UnansweredListBean;
+
+public class QuestionListService extends Service {
+	private QuestionDao qdao;
+
+	// 使用するDaoをnewする
+	@Override
+	void prePare() {
+		this.qdao = new QuestionDao(this.con);
+	}
+
+	public AnsweredListBean answered() {
+		start();
+		List<Question> question = new ArrayList<Question>();
+		AnsweredListBean bean = null;
+		try {
+			question = qdao.answered();
+
+			bean = new AnsweredListBean();
+			this.getCategories(bean);	// 検索バーのカテゴリ追加分
+			bean.setAnswered(question);
+
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		} finally {
+			end();
+		}
+		return bean;
+	}
+
+	public UnansweredListBean unanswered() {
+		start();
+		List<Question> question = new ArrayList<Question>();
+		UnansweredListBean bean = null;
+		try {
+			question = qdao.unanswered();
+
+			bean = new UnansweredListBean();
+
+			this.getCategories(bean);	// 検索バーのカテゴリ追加分
+
+			bean.setUnanswered(question);
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		} finally{
+			end();
+		}
+		return bean;
+	}
+
+
+
+
+
+}
