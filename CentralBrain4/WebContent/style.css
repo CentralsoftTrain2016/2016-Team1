@@ -1,0 +1,267 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #ADD8E6;
+	color: #483D8B
+	text-align: center; /* center on ie */
+    width: 100%;
+}
+
+* {
+	font-family: "ＭＳ Ｐゴシック", sans-serif;
+	font-weight: bold
+}
+
+h1 {
+	position: relative;
+	padding: 0 .4em .1em;
+}
+
+h1::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	content: '';
+	width: 100%;
+	height: 10px;
+	background-color: #b6f0fc;
+}
+
+h2 {
+	position: relative;
+	padding: .5em .75em;
+	background-color: #f6f6f6;
+}
+
+h2::before, h2::after {
+	position: absolute;
+	bottom: 8px;
+	z-index: -1;
+	content: '';
+	width: 20%;
+	height: 40%;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+}
+
+h2::before {
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	left: .3em;
+}
+
+h2::after {
+	-webkit-transform: rotate(3deg);
+	transform: rotate(3deg);
+	right: .3em;
+}
+
+h4 {
+	padding-bottom: .5em;
+	border-bottom: 3px double #483D8B;
+}
+
+p {
+	font-size: 110%;
+	line-height: 1.4;
+	margin-left: 5%;
+	margin-right: 30%;
+}
+
+.btn {
+	background: #EEE;
+	color: #111;
+	-moz-box-shadow: 0px 0px 2px rgba(000, 000, 000, 0.3), inset 0px 0px 3px
+		rgba(000, 000, 000, 1);
+	-webkit-box-shadow: 0px 0px 2px rgba(000, 000, 000, 0.3), inset 0px 0px
+		3px rgba(000, 000, 000, 1);
+	border: 1px solid #FFF;
+	width: 100px;
+	padding: 10px 0;
+}
+
+.sbtn2 {
+	position: relative;
+	z-index: 2;
+	background-color: #333;
+	border: 2px solid #333;
+	color: #fff;
+	line-height: 15px;
+}
+.sbtn2:hover {
+	background-color: #fff;
+	border-color: #59b1eb;
+	color: #59b1eb;
+}
+.sbtn2::before,
+.sbtn2::after {
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #333;
+}
+.sbtn2::before {
+	right: 0;
+}
+.sbtn2::after {
+	left: 0;
+}
+.sbtn2:hover::before,
+.sbtn2:hover::after {
+	width: 0;
+	background-color: #59b1eb;
+}
+
+
+
+
+.sbtn {
+	background: #191970;
+	color: #90EE90;
+	-moz-box-shadow: 0px 0px 2px rgba(000, 000, 000, 0.3), inset 0px 0px 3px
+		rgba(000, 000, 000, 1);
+	-webkit-box-shadow: 0px 0px 2px rgba(000, 000, 000, 0.3), inset 0px 0px
+		3px rgba(000, 000, 000, 1);
+	border: 1px solid #FFF;
+	width: 50px;
+	padding: 3px 0;
+}
+
+
+.fbtn {
+	background: #ffff75;
+	color: #111;
+	-moz-box-shadow: 0px 0px 2px rgba(000, 000, 000, 0.3), inset 0px 0px 3px
+		rgba(000, 000, 000, 1);
+	-webkit-box-shadow: 0px 0px 2px rgba(000, 000, 000, 0.3), inset 0px 0px
+		3px rgba(000, 000, 000, 1);
+	border: 1px solid #FFF;
+	width: 300px;
+	padding: 5px 0;
+}
+.fbtn:hover {
+	background-color: #FFA500;
+}
+
+.tag {
+	font-size: 80%; background : #90EE90;
+	color: #191970;
+	-moz-box-shadow: 0px 0px 2px rgba(000, 000, 000, 0.3), inset 1px 1px 5px
+		rgba(000, 153, 204, 1), inset -1px -1px 5px rgba(205, 0, 0, 1);
+	-webkit-box-shadow: 0px 0px 2px rgba(000, 000, 000, 0.3), inset 1px 1px
+		5px rgba(000, 153, 204, 1), inset -1px -1px 5px rgba(205, 0, 0, 1);
+	width: 100px;
+	padding: 10px 0;
+	background: #90EE90;
+}
+.tag:hover {
+	background-color: #ADFF2F;
+}
+
+	.goodbtn {
+    background: -moz-linear-gradient(top,#FFF 0%,#E6E6E6);
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#E6E6E6));
+    border: 2px solid #DDD;
+    color: #111;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-box-shadow: 1px 1px 1px rgba(000,000,000,0.3);
+    -webkit-box-shadow: 1px 1px 1px rgba(000,000,000,0.3);
+    width: 80px;
+    padding: 8px 0;
+}
+.goodbtn:hover {
+	background-color: #FFD700;
+}
+
+.qbtn {
+	background-color: #333;
+	color: #fff;
+}
+.qbtn:hover {
+	background-color: #59b1eb;
+}
+
+.icon_img {
+    width: 10%;
+    height: 10%;
+    background: url('/samplePicture/icon.png');
+}
+.frame {
+	display: inline-block;
+	position: relative;
+}
+.frame:after {
+	position: absolute;
+	display: block;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	box-shadow:
+	  inset 0 0 20px #fff /* 背景色と同じ色 */,
+	  inset 0 0 20px #fff,
+	  inset 0 0 20px #fff,
+	  inset 0 0 20px #fff;
+}
+
+/* A:link, A:visited, A:active, A:hover { */
+/* 	color: #30a966; */
+/* } */
+
+/* A:link, A:visited { */
+/* 	text-decoration: none; */
+/* } */
+
+/* A:hover, A:active { */
+/* 	text-decoration: none; */
+/* 	color: #444444; . searchFrame { position : relative; */
+/* 	display: inline-block; */
+/* } */
+
+.inputBox {
+	padding-right: 20px;
+	width: 120px;
+}
+
+.searchFrame .clearButton {
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	right: 2px;
+	top: 1px;
+	background: url(clear.png) no-repeat left center;
+	cursor: pointer;
+}
+
+#search-box input[type="text"] {
+	margin: 0;
+	padding: 0;
+	width: 210px;
+}
+
+#search-box input[type="submit"] {
+	background-color: #000000;
+	border-bottom: 2px solid #666666;
+	border-left: 2px solid #CCCCCC;
+	border-right: 2px solid #666666;
+	border-top: 2px solid #CCCCCC;
+	color: #FFFFFF;
+	font-family: "ＭＳ Ｐゴシック", "平成角ゴシック", verdana, arial, sans-serif;
+	font-size: small;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	vertical-align: baseline;
+	width: 50px;
+}
+
+#container {
+    text-align: left;
+    margin: 0 auto; /* center on everything else */
+    width: 720px;
+}
